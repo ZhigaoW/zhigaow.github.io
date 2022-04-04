@@ -40,9 +40,13 @@
 pid_t fork(void);
 ```
 因为fork函数在父进程和子进程中的返回值不一样，所以常常有如下处理
+
 ![](fork.png)
+
 子进程使用execve函数执行其他应用程序，execve函数会**将当前内存的内存布局替换为执行的函数的内存布局**
+
 ![](process_create.png)
+
 
 
 

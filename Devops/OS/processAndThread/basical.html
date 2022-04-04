@@ -101,8 +101,7 @@
         }
 
         img {
-            max-width: 100%;
-            max-height: 100%;
+            max-width: 40%;
         }
 
         a {
@@ -165,10 +164,6 @@
             padding: 0 16px 0 10px;
             border-left-width: 5px;
             border-left-style: solid;
-        }
-
-        img {
-            width: 400px;
         }
 
         code {
@@ -413,11 +408,10 @@
 */</span>
 <span class="hljs-function"><span class="hljs-keyword">pid_t</span> <span class="hljs-title">fork</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>;
 </div></code></pre>
-    <p>因为fork函数在父进程和子进程中的返回值不一样，所以常常有如下处理
-        <img src="fork.png" alt="">
-        子进程使用execve函数执行其他应用程序，execve函数会<strong>将当前内存的内存布局替换为执行的函数的内存布局</strong>
-        <img src="process_create.png" alt="">
-    </p>
+    <p>因为fork函数在父进程和子进程中的返回值不一样，所以常常有如下处理</p>
+    <p><img src="fork.png" alt=""></p>
+    <p>子进程使用execve函数执行其他应用程序，execve函数会<strong>将当前内存的内存布局替换为执行的函数的内存布局</strong></p>
+    <p><img src="process_create.png" alt=""></p>
     <p><strong>当一个进程使用clone函数生成一个子进程，子进程运行参数func指定的函数，当func返回，子进程就会终止。clone产生的子进程和vfork类似，共享父进程的内存，不使用父进程的栈。相反，调用者必须分配一块大小适中的内存空间供子进程的栈使用，同时将这块内存的指针置于参数child_stack
             中。在大多数硬件架构中，栈空间的增长方向是向下的，所以参数child_stack应当指向所分配内存块的高端。</strong></p>
     <ul>
