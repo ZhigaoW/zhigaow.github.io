@@ -10,5 +10,10 @@
   - [ProcessAndThread](Devops/OS/processAndThread/basical.html)
 
 
+### Alg
+
+- [segmentTree](Alg/SegmentTree/segmentTree.html)
+
+
 
 
