@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>index.md</title>
+    <title>segmentTree.md</title>
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 
     <style>
@@ -101,8 +101,7 @@
         }
 
         img {
-            max-width: 100%;
-            max-height: 100%;
+            max-width: 40%;
         }
 
         a {
@@ -368,26 +367,48 @@
                 : 'default'
         });
     </script>
-    <h1 id="negivation">Negivation</h1>
-    <h3 id="devops">Devops</h3>
-    <ul>
-        <li>
-            <p>Go</p>
-            <ul>
-                <li><a href="Devops/Go/basical/basical.html">basical</a></li>
-            </ul>
-        </li>
-        <li>
-            <p>OS</p>
-            <ul>
-                <li><a href="Devops/OS/processAndThread/basical.html">ProcessAndThread</a></li>
-            </ul>
-        </li>
-    </ul>
-    <h3 id="alg">Alg</h3>
-    <ul>
-        <li><a href="Alg/SegmentTree/segmentTree.html">segmentTree</a></li>
-    </ul>
+    <h1 id="segment-tree">Segment Tree</h1>
+    <p><img src="setmentTree.png" alt=""></p>
+    <p>建立一棵线段树</p>
+    <pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">build</span><span class="hljs-params">(l, r, p <span class="hljs-keyword">int</span>)</span></span> {
+    <span class="hljs-keyword">if</span> l + <span class="hljs-number">1</span> == r {
+        d[p] = a[l]
+        <span class="hljs-keyword">return</span> 
+    }
+
+    m := (l + r + <span class="hljs-number">1</span>) / <span class="hljs-number">2</span>
+    build(l, m, p * <span class="hljs-number">2</span> + <span class="hljs-number">1</span>)
+    build(m, r, p * <span class="hljs-number">2</span> + <span class="hljs-number">2</span>)
+    d[p] = d[p * <span class="hljs-number">2</span> + <span class="hljs-number">1</span>] + d[p * <span class="hljs-number">2</span> + <span class="hljs-number">2</span>]
+}
+</div></code></pre>
+    <p>查找区间的和</p>
+    <pre class="hljs"><code><div>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">getsum</span><span class="hljs-params">(fl, fr, l, r, p <span class="hljs-keyword">int</span>)</span></span> {
+    <span class="hljs-comment">// fl, fl 要查找的区间的左边界和右边界</span>
+
+
+    <span class="hljs-comment">// 当前区间为询问区间的子集合时候立刻返回</span>
+    <span class="hljs-keyword">if</span> fl &lt;= l &amp;&amp; r &lt;= fr {
+        <span class="hljs-keyword">return</span> d[p]
+    }
+
+    m, sum := (l + r + <span class="hljs-number">1</span>) / <span class="hljs-number">2</span>, <span class="hljs-number">0</span>
+    <span class="hljs-comment">// 到这一步证明 当前区间包含询问区间</span>
+    <span class="hljs-comment">// 如果询问区间的左边界小于当前区间的中心值</span>
+    <span class="hljs-comment">// 因应该查找， [l, m]</span>
+
+    <span class="hljs-keyword">if</span> fl &lt; m {
+        sum += getsum(fl, fr, l, m, p * <span class="hljs-number">2</span> + <span class="hljs-number">1</span>)
+    }
+
+    <span class="hljs-keyword">if</span> r &gt; m {
+        sum += getsum(fl, fr, m, r, p * <span class="hljs-number">2</span> + <span class="hljs-number">2</span>)
+    } 
+    <span class="hljs-keyword">return</span> sum
+}
+</div></code></pre>
+    <p>线段树中值的修改和懒惰标记</p>
 
 </body>
 

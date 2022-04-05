@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>index.md</title>
+    <title>basical.md</title>
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 
     <style>
@@ -101,8 +101,7 @@
         }
 
         img {
-            max-width: 100%;
-            max-height: 100%;
+            max-width: 40%;
         }
 
         a {
@@ -368,26 +367,57 @@
                 : 'default'
         });
     </script>
-    <h1 id="negivation">Negivation</h1>
-    <h3 id="devops">Devops</h3>
-    <ul>
+    <hr>
+    <ol>
         <li>
-            <p>Go</p>
-            <ul>
-                <li><a href="Devops/Go/basical/basical.html">basical</a></li>
-            </ul>
+            <p><a href="https://filippo.io/linux-syscall-table/">linux systemcall table</a></p>
         </li>
         <li>
-            <p>OS</p>
-            <ul>
-                <li><a href="Devops/OS/processAndThread/basical.html">ProcessAndThread</a></li>
-            </ul>
+            <p><a href="https://manpages.debian.org/">debian man page</a> /
+                <a href="https://man7.org/linux/man-pages/index.html">linux man page online</a>
+            </p>
         </li>
-    </ul>
-    <h3 id="alg">Alg</h3>
+    </ol>
+    <hr>
+    <p><a
+            href="https://unix.stackexchange.com/questions/17998/what-are-software-and-hardware-interrupts-and-how-are-they-processed">linux
+            Interrupt</a></p>
+    <p><img src="interrupt.png" alt=""></p>
+    <p>一个进程创建需要消耗的资源</p>
     <ul>
-        <li><a href="Alg/SegmentTree/segmentTree.html">segmentTree</a></li>
+        <li>进程执行时候需要的数据（内存中的数据）</li>
+        <li>进程在创建时会保存页表</li>
+        <li>打开的文件的信息</li>
+        <li>时间，用户组等信息</li>
     </ul>
+    <p><img src="process_resource.png" alt=""></p>
+    <p>与进程相关的系统调用的常见使用方法</p>
+    <ul>
+        <li>先fork在execve的原因是父亲进程要监控子进程</li>
+    </ul>
+    <p><img src="coperate.png" alt=""></p>
+    <p>父进程启动fork函数可以以<strong>相同的内存布局</strong>复制出一个子进程，父进程和子进程同时从fork函数处运行下去</p>
+    <ul>
+        <li>创建一个线程可以使用写时复制的方法来减少开销</li>
+    </ul>
+    <pre class="hljs"><code><div><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;unistd.h&gt;</span></span>
+<span class="hljs-comment">/* return:
+                         -1 : failer
+                          0 : in child process
+    cpid (child process id) : in paraent process 
+*/</span>
+<span class="hljs-function"><span class="hljs-keyword">pid_t</span> <span class="hljs-title">fork</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>;
+</div></code></pre>
+    <p>因为fork函数在父进程和子进程中的返回值不一样，所以常常有如下处理</p>
+    <p><img src="fork.png" alt=""></p>
+    <p>子进程使用execve函数执行其他应用程序，execve函数会<strong>将当前内存的内存布局替换为执行的函数的内存布局</strong></p>
+    <p><img src="process_create.png" alt=""></p>
+    <p><strong>当一个进程使用clone函数生成一个子进程，子进程运行参数func指定的函数，当func返回，子进程就会终止。clone产生的子进程和vfork类似，共享父进程的内存，不使用父进程的栈。相反，调用者必须分配一块大小适中的内存空间供子进程的栈使用，同时将这块内存的指针置于参数child_stack
+            中。在大多数硬件架构中，栈空间的增长方向是向下的，所以参数child_stack应当指向所分配内存块的高端。</strong></p>
+    <ul>
+        <li>栈增长方向对架构的依赖是clone设计的一处缺陷。clone2改善了这个缺陷。</li>
+    </ul>
+    <p>Pthreads线程API内部由clone系统调用实现</p>
 
 </body>
 
