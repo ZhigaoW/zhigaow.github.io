@@ -1,4 +1,13 @@
-# Negivation
+**Record important and core things, a blog only writes one thing**
+
+
+## About Me
+
+A MAN...
+
+
+
+## Negivation
 
 
 ### Devops
