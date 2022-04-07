@@ -17,6 +17,7 @@ A MAN...
 
 - Go
   - [start](Devops/Go/start/start.html)
+  - [input](Devops/Go/intput/input.html)
   - [string rune byte](Devops/Go/string_bytes_runes/goString.html)
   - [array and slice](Devops/Go/arrayAndSlice/arrayAndSlices.html)
   - [context](Devops/Go/context/context.html)

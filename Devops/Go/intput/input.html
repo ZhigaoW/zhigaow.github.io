@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>index.md</title>
+<title>input.md</title>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 
 <style>
@@ -365,43 +365,114 @@ code {
           : 'default'
     });
   </script>
-<p><strong>Record important and core things, a blog only writes one thing</strong></p>
-<h2 id="about-me">About Me</h2>
-<p>A MAN...</p>
-<h2 id="negivation">Negivation</h2>
-<h3 id="alg">Alg</h3>
+<h2 id="%E4%B8%80%E4%B8%AA%E5%A5%BD%E7%9A%84%E4%BE%8B%E5%AD%90">一个好的例子</h2>
+<pre class="hljs"><code><div><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+	<span class="hljs-string">"bufio"</span>
+	<span class="hljs-string">"fmt"</span>
+	<span class="hljs-string">"os"</span>
+	<span class="hljs-string">"strconv"</span>
+	<span class="hljs-string">"strings"</span>
+)
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+	reader := bufio.NewReader(os.Stdin)
+	str, _ := reader.ReadString(<span class="hljs-string">'\n'</span>)
+
+	strsli := strings.Split(str, <span class="hljs-string">" "</span>)
+	strsli = strsli[:<span class="hljs-built_in">len</span>(strsli)<span class="hljs-number">-1</span>]
+
+	nums := []<span class="hljs-keyword">int</span>{}
+	<span class="hljs-keyword">for</span> _, s := <span class="hljs-keyword">range</span> strsli {
+		t, _ := strconv.Atoi(s)
+		nums = <span class="hljs-built_in">append</span>(nums, t)
+	}
+
+	fmt.Println(nums)
+
+}
+</div></code></pre>
+<h1 id="fmt--bufio">fmt &amp; bufio</h1>
+<p><a href="https://pkg.go.dev/fmt">fmt</a></p>
+<h2 id="fmtscan">fmt.Scan</h2>
+<p><code>Scan</code>从标准输入读入文本，将连续的被空格分隔的值存储在连续的参数中。新行被计算为空格。返回成功扫描的值的数量，如果成功扫描的数量没有参数多，<code>err</code>将会显示原因。</p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">Scan</span><span class="hljs-params">(a ...any)</span> <span class="hljs-params">(n <span class="hljs-keyword">int</span>, err error)</span></span>
+</div></code></pre>
+<h3 id="%E7%94%A8%E6%B3%95">用法</h3>
+<pre class="hljs"><code><div><span class="hljs-keyword">var</span> (
+    s <span class="hljs-keyword">string</span>
+    n <span class="hljs-keyword">int</span>
+    f <span class="hljs-keyword">float64</span>
+)
+
+fmt.Scan(&amp;s, &amp;n, &amp;f)
+fmt.Println(s, n, f)
+</div></code></pre>
+<pre class="hljs"><code><div>$ go run main.go 
+hello 10
+-56.2 
+hello 10 -56.2
+</div></code></pre>
+<h2 id="fmtscanf">fmt.Scanf</h2>
 <ul>
-<li><a href="Alg/SegmentTree/segmentTree.html">segmentTree</a></li>
-</ul>
-<h3 id="devops">Devops</h3>
+<li>标准输入读入文本</li>
+<li>将连续的被空格分隔的值存入连续的参数</li>
+<li>存入的形式被<code>format</code>决定</li>
+<li>错误会被<code>err</code>返回</li>
+<li><strong>新的一行必须和format中的换行符匹配</strong>
 <ul>
-<li>
-<p>Go</p>
-<ul>
-<li><a href="Devops/Go/start/start.html">start</a></li>
-<li><a href="Devops/Go/intput/input.html">input</a></li>
-<li><a href="Devops/Go/string_bytes_runes/goString.html">string rune byte</a></li>
-<li><a href="Devops/Go/arrayAndSlice/arrayAndSlices.html">array and slice</a></li>
-<li><a href="Devops/Go/context/context.html">context</a></li>
-<li><a href="Devops/Go/plan9/plan9.html">plan9 assmeble</a></li>
+<li>The one exception: the verb %c always scans the next rune in the input, even if it is a space (or tab etc.) or newline.</li>
 </ul>
 </li>
-<li>
-<p>OS</p>
-<ul>
-<li><a href="Devops/OS/linux%E5%91%BD%E4%BB%A4%E8%A1%8C/linux_basical.html">linux command line</a></li>
-<li><a href="Devops/OS/Vim/PracticalVim.html">vim</a></li>
-<li><a href="Devops/OS/g++%E7%BC%96%E8%AF%91%E4%B8%8E%E9%93%BE%E6%8E%A5/g++.html">g++ compile and link</a></li>
-<li><a href="Devops/OS/processAndThread/basical.html">ProcessAndThread</a></li>
 </ul>
-</li>
-<li>
-<p>Web</p>
-<ul>
-<li><a href="Devops/Web/http_work/http.html">how http works</a></li>
-</ul>
-</li>
-</ul>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">Scanf</span><span class="hljs-params">(format <span class="hljs-keyword">string</span>, a ...any)</span> <span class="hljs-params">(n <span class="hljs-keyword">int</span>, err error)</span></span>
+</div></code></pre>
+<h3 id="%E7%94%A8%E6%B3%95">用法</h3>
+<pre class="hljs"><code><div><span class="hljs-keyword">var</span> n1, n2 <span class="hljs-keyword">int</span>
+fmt.Scanf(<span class="hljs-string">"%d\n%d"</span>, &amp;n1, &amp;n2)
+fmt.Println(<span class="hljs-string">"n1 = "</span>, n1, <span class="hljs-string">"n2 = "</span>, n2)
+</div></code></pre>
+<pre class="hljs"><code><div>$ go run main.go
+12
+15
+n1 =  12 n2 =  15
+</div></code></pre>
+<h2 id="fmtscanln">fmt.Scanln</h2>
+<p><code>Scanln</code>和<code>Scan</code>很像，但是会在新一行停下来，同时最后一项之后必须是换行符或者文件结束符<code>EOF</code></p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">Scanln</span><span class="hljs-params">(a ...any)</span> <span class="hljs-params">(n <span class="hljs-keyword">int</span>, err error)</span></span>
+</div></code></pre>
+<h3 id="%E7%94%A8%E6%B3%95">用法</h3>
+<pre class="hljs"><code><div><span class="hljs-keyword">var</span> (
+    s <span class="hljs-keyword">string</span>
+    n <span class="hljs-keyword">int</span>
+    l <span class="hljs-keyword">float64</span>
+)
+fmt.Scanln(&amp;s, &amp;n, &amp;l)
+fmt.Println(l, n, s)
+</div></code></pre>
+<pre class="hljs"><code><div>$ go run main.go 
+str -89 989.901
+989.901 -89 str
+</div></code></pre>
+<h2 id="reader">Reader</h2>
+<p><code>Reader</code>是定义在bufio.go文件下的结构体</p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-params">(b *Reader)</span> <span class="hljs-title">ReadString</span><span class="hljs-params">(delim <span class="hljs-keyword">byte</span>)</span> <span class="hljs-params">(<span class="hljs-keyword">string</span>, error)</span></span>
+</div></code></pre>
+<p><code>ReadString</code>会在遇到<em>delim</em>时候停止, <strong>注意，其会将delim也读入</strong></p>
+<h3 id="%E7%94%A8%E6%B3%95">用法</h3>
+<pre class="hljs"><code><div>reader := bufio.NewReader(os.Stdin)
+str, _ := reader.ReadString(<span class="hljs-string">'\n'</span>)
+strSli := strings.Split(str, <span class="hljs-string">" "</span>)
+
+<span class="hljs-comment">// 不加这一行会有换行符也被读入</span>
+strSli = strSli[:<span class="hljs-built_in">len</span>(strSli)<span class="hljs-number">-1</span>]
+fmt.Println(strSli)
+</div></code></pre>
+<pre class="hljs"><code><div>$ go run main.go 
+aaa bbb ccc abc cba
+[aaa bbb ccc abc]
+</div></code></pre>
 
 </body>
 </html>
