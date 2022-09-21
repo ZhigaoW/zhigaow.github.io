@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width initial-scale=1'>
+        <title>io_uring</title>
+        <link rel="stylesheet" href="../wzg.css">
+</head>
+
+<body>
+        <h1 id='iouring'>io_uring</h1>
+        <p><strong>io_uring</strong>设计者自己写的第一手资料：<a href='https://kernel.dk/io_uring.pdf'>efficient io with io_uring</a>
+        </p>
+        <p>&nbsp;</p>
+        <p>design thinking: <em>0 copy</em> -&gt; <em>share data u/k</em> -&gt; <em>[lock]no efficiency</em> -&gt;
+                <em>ring buffer(1 producer and 1 consumer)</em></p>
+        <ul>
+                <li>
+                        <p>submitting IO(submission queue)</p>
+                        <ul>
+                                <li>application(<strong>producer</strong>)-&gt;kernel(<strong>consumer</strong>)</li>
+
+                        </ul>
+                </li>
+                <li>
+                        <p> completion IO(completion queue)</p>
+                        <ul>
+                                <li>kernel(<strong>producer</strong>)-&gt; application(<strong>consumer</strong>)</li>
+
+                        </ul>
+                </li>
+
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <pre><code class='language-c' lang='c'>struct io_uring_cqe {
+   __u64 user_data;
+   __s32 res;
+   __u32 flags;
+};
+</code></pre>
+        <p><code>user_data</code>: initial request submission</p>
+        <p><code>res</code>: return val of sys call</p>
+        <p><code>flag</code>: carry meta data related to this operation(<em>*not use now</em>)</p>
+        <pre><code class='language-c' lang='c'>struct io_uring_sqe {
+   __u8 opcode;
+   __u8 flags;
+   __u16 ioprio;
+   __s32 fd;
+   __u64 off;
+   __u64 addr;
+   __u32 len;
+   union {
+   __kernel_rwf_t rw_flags;
+   __u32 fsync_flags;
+   __u16 poll_events;
+__u32 sync_range_flags;
+__u32 msg_flags;   
+   };
+   __u64 user_data;
+   union {
+   __u16 buf_index;
+   __u64 __pad2[3];
+   };
+};
+</code></pre>
+        <p>&nbsp;</p>
+</body>
+
+</html>

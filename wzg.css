@@ -1,0 +1,60 @@
+h1 {
+        letter-spacing: 2px;
+        word-spacing: -0.5em;
+        text-align:center;
+        color: green;
+        font-size: xx-large;
+}
+
+h2 {
+        letter-spacing: 2px;
+        word-spacing: -0.5em;
+        text-align: center;
+        color: green;
+}
+
+
+h3 {
+        letter-spacing: 2px;
+        word-spacing: -0.5em;
+        color: green;
+        text-emphasis: true;
+}
+
+h4 {
+        letter-spacing: 2px;
+        word-spacing: -0.5em;
+        color:blue;
+        text-emphasis: true;
+}
+p {
+        word-spacing: 0em;
+}
+a {
+        letter-spacing: 2px;
+        word-spacing: -0.5em;
+        text-decoration: none;
+        color:darkblue;
+        text-emphasis: true;
+}
+
+strong {
+        font-size: large; 
+        font-weight: 900;
+}
+
+table {
+        text-align: left;
+        border-left: 0px;
+        border-right: 0px;
+        background:none;
+        border-color:dodgerblue;
+}
+
+table tr {
+        border: 0px;
+}
+
+table td {
+        border: 0px;
+}

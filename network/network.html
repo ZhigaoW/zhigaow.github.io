@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>NETWORK</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8"> 
 <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script> 
 
 <style>
@@ -44,6 +44,11 @@
                 text-decoration: none;
                 color:darkblue;
                 text-emphasis: true;
+        }
+
+        strong {
+               font-size: large; 
+               font-weight: 900;
         }
 
         table {
@@ -113,7 +118,76 @@
 
 
 
+<h2> SOCKET </h2>
 
+<strong>socket = (source ip, source port, destination ip, destination port, protocol)</strong> <br/>
+<p>
+        一个socket被看作是一个5元组，常见的流程如下: <br/>
+        <ul>    
+                <li>服务器端</li>
+                <ol>
+                        <li>socket()</li>
+                        <li>bind()</li>
+                        <li>listen()</li>
+                        <li>accept()</li>
+                </ol> 
+                <li>客户端</li>
+                <ol>
+                        <li>socket()</li>
+                        <li>connect()</li>
+                </ol> 
+        </ul>
+</p>
+
+<h3>Question</h3>
+<ol>
+        <li>
+        <a href="https://stackoverflow.com/questions/1790750/what-is-the-difference-between-read-and-recv-and-
+        between-send-and-write">What is the Difference Between read() and recv() , and Between send() and write()?</a> <br/>
+        </li>
+        <li>
+        <a href="https://stackoverflow.com/questions/34073871/socket-programming-whats-the-difference-between-
+        listen-and-accept">Socket programming - What's the difference between listen() and accept()?</a> <br/>
+        </li>
+</ol>
+
+<img src="./socket.png" width="450px"/>
+
+<pre>
+#include &lt sys/socket.h &gt
+listenfd = int socket(int domain, int type, int protocol);
+</pre>
+
+<ul>
+        <li>domain      : 选择网络层协议 可以选择IPV6或者IPV4等 </li>
+        <li>type        : 选择传输层协议 可以选择TCP或UPD等 </li>
+        <li>protocol    : 具体的PROCOTOL 0值为默认</li>
+        <li>return  : 成功返回一个socket的文件描述符 失败返回-1</li>
+</ul>
+
+<pre>
+#include &lt sys/socket.h &gt
+int bind(int sockfd, const struct sockaddr *addr, socklen_t addrlen);
+</pre>
+
+<ul>
+        <li>bind的作用      : 绑定具体的地址，但是一般把这一步叫命名socket.</li>
+</ul>
+
+<pre>
+#include &lt sys/socket.h &gt
+int listen(int sockfd, int backlog);
+</pre>
+
+<ul>
+        <li>backlog : 全联接的数量</li>
+</ul>
+
+
+<pre>
+#include <sys/socket.h>
+int accept(int sockfd, struct sockaddr *restrict addr, socklen_t *restrict addrlen);
+</pre>
 
 
 <h2>LINUX NETWORK I/O MULTIPLEXING</h2>
@@ -229,6 +303,8 @@ while (1) {
 <h3>pool</h3>
 
 <h3>epoll</h3>
+
+<a href="https://stackoverflow.com/questions/2794535/linux-and-i-o-completion-ports"> Linux and I/O completion ports?</a>
 <h4><a href="https://man7.org/linux/man-pages/man7/epoll.7.html">EPOLL</a>      I/O 事件通知工厂</h4>
 
 <pre class="prettyprint"> 
