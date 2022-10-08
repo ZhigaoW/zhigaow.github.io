@@ -1,4 +1,9 @@
-site_name: My Docs
+site_name: Wang Zhigao's Blog
+
+nav:
+  - Home: 'index.md'
 
 theme:
   name: material
+
+
