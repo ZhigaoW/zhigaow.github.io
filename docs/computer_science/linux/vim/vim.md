@@ -1,6 +1,3 @@
-**[--BACK--](../README.md)**
-
----
 
 ## Vim的哲学
 **Operator + Number + Motion**

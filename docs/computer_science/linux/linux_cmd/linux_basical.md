@@ -122,7 +122,3 @@ chmod a-x .bashrc
 
 
 
-
----
-
-[---Back---](../README.md)

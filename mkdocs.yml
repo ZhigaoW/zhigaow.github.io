@@ -33,14 +33,14 @@ theme:
     repo: fontawesome/brands/github
 edit_uri: edit/main/docs # 编辑按钮跳转的链接
 ## [top-right corner]
-repo_url: https://github.com/ZhigaoW/yang-xijie.github.io # 右上角点击跳转的链接
-repo_name: zhigaow.github.io # 右上角的名字
+repo_url: https://github.com/zhigaow/zhigaow.github.io # 右上角点击跳转的链接
+repo_name: zhigoaw.github.io # 右上角的名字
 ## [bottom-left corner]
 copyright: Copyright &copy; 2022 王志高 # 左下角的版权声明
 ## [bottom-right corner]
 extra:
   social: # icons
-    - icon: fontawesome/brands/envelope
+    - icon: fontawesome/brands/bilibili
       link: aimiskamei@gmail.com 
       name: Link me | Email # 鼠标悬浮提示
 
@@ -50,11 +50,12 @@ nav:
     - 网络: 
       - io_uring详解: computer_science/network/io_uring.md
       - 网络基础: computer_science/network/linux-network.md
-    - linux
-      - g++编译与链接: computer_science/linux/g++_link_compile/g++.md
-      - linux命令行: computer_science/linux/linux_cmd/basical.md
-      - 线程和进程: computer_science/linux/process/thread.md
+    - linux:
+      - g++编译与链接: computer_science/linux/gplusplus_link_compile/gplusplus.md
+      - linux命令行: computer_science/linux/linux_cmd/linux_basical.md
+      - 线程和进程: computer_science/linux/process_thread/basical.md
       - vim: computer_science/linux/vim/vim.md
+
   - 关于:
     - about/index.md # 使用两个index 这样子左上角第一次打开会是所有Tab 而不是About
     - 个人履历: about/cv-full.md
