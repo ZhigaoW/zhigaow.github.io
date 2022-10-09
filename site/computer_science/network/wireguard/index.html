@@ -12,21 +12,21 @@
         <meta name="author" content="Wang Zhigao">
       
       
-        <link rel="canonical" href="https://zhigaow.github.io/computer_science/linux/linux_cmd/linux_basical/">
+        <link rel="canonical" href="https://zhigaow.github.io/computer_science/network/wireguard/">
       
-      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
     
     
       
-        <title>linux命令行 - Wang Zhigao's Note</title>
+        <title>wireguard - Wang Zhigao's Note</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.20d9efc8.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.20d9efc8.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
         
       
       
@@ -43,11 +43,11 @@
       
     
     
-      <link rel="stylesheet" href="../../../../mkdocs/css/no-footer.css">
+      <link rel="stylesheet" href="../../../mkdocs/css/no-footer.css">
     
-      <link rel="stylesheet" href="../../../../mkdocs/css/unordered-list-symbols.css">
+      <link rel="stylesheet" href="../../../mkdocs/css/unordered-list-symbols.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#ubuntuwireguard" class="md-skip">
           跳转至
         </a>
       
@@ -90,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../../.." title="Wang Zhigao&#39;s Note" class="md-header__button md-logo" aria-label="Wang Zhigao's Note" data-md-component="logo">
+    <a href="../../.." title="Wang Zhigao&#39;s Note" class="md-header__button md-logo" aria-label="Wang Zhigao's Note" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              linux命令行
+              wireguard
             
           </span>
         </div>
@@ -218,7 +218,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../network/io_uring/" class="md-tabs__link md-tabs__link--active">
+      <a href="../io_uring/" class="md-tabs__link md-tabs__link--active">
         计算机
       </a>
     </li>
@@ -236,7 +236,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../about/" class="md-tabs__link">
+      <a href="../../../about/" class="md-tabs__link">
         关于
       </a>
     </li>
@@ -264,7 +264,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="Wang Zhigao&#39;s Note" class="md-nav__button md-logo" aria-label="Wang Zhigao's Note" data-md-component="logo">
+    <a href="../../.." title="Wang Zhigao&#39;s Note" class="md-nav__button md-logo" aria-label="Wang Zhigao's Note" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -327,12 +327,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_1" type="checkbox" id="__nav_1_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_1" type="checkbox" id="__nav_1_1" checked>
       
       
       
@@ -363,7 +365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../network/io_uring/" class="md-nav__link">
+      <a href="../io_uring/" class="md-nav__link">
         io_uring详解
       </a>
     </li>
@@ -377,7 +379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../network/linux-network/" class="md-nav__link">
+      <a href="../linux-network/" class="md-nav__link">
         网络基础
       </a>
     </li>
@@ -389,11 +391,93 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../network/wireguard/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          wireguard
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         wireguard
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ini" class="md-nav__link">
+    配置使用INI格式
+  </a>
+  
+    <nav class="md-nav" aria-label="配置使用INI格式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#client" class="md-nav__link">
+    client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server" class="md-nav__link">
+    server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    字段
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    启动与停止
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    参考资料
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -410,14 +494,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2" type="checkbox" id="__nav_1_2" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_2" type="checkbox" id="__nav_1_2" checked>
       
       
       
@@ -450,7 +532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gplusplus_link_compile/gplusplus/" class="md-nav__link">
+      <a href="../../linux/gplusplus_link_compile/gplusplus/" class="md-nav__link">
         g++编译与链接
       </a>
     </li>
@@ -462,21 +544,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../linux/linux_cmd/linux_basical/" class="md-nav__link">
         linux命令行
       </a>
-      
     </li>
   
 
@@ -488,7 +560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../process_thread/basical/" class="md-nav__link">
+      <a href="../../linux/process_thread/basical/" class="md-nav__link">
         线程和进程
       </a>
     </li>
@@ -502,7 +574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vim/vim/" class="md-nav__link">
+      <a href="../../linux/vim/vim/" class="md-nav__link">
         vim
       </a>
     </li>
@@ -552,7 +624,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../about/">关于</a>
+          <a href="../../../about/">关于</a>
           
             <label for="__nav_2">
               <span class="md-nav__icon md-icon"></span>
@@ -575,7 +647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../about/cv-full/" class="md-nav__link">
+      <a href="../../../about/cv-full/" class="md-nav__link">
         个人履历
       </a>
     </li>
@@ -589,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../about/support/" class="md-nav__link">
+      <a href="../../../about/support/" class="md-nav__link">
         支持作者
       </a>
     </li>
@@ -623,6 +695,62 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ini" class="md-nav__link">
+    配置使用INI格式
+  </a>
+  
+    <nav class="md-nav" aria-label="配置使用INI格式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#client" class="md-nav__link">
+    client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server" class="md-nav__link">
+    server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    字段
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    启动与停止
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    参考资料
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -638,220 +766,94 @@
 
 
 
-  <a href="https://github.com/zhigaow/zhigaow.github.io/edit/main/docs/computer_science/linux/linux_cmd/linux_basical.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/zhigaow/zhigaow.github.io/edit/main/docs/computer_science/network/wireguard.md" title="编辑此页" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="_1">说明<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>本文档主要用少量语言和较多的图来说明linux的使用方法，并且作者坚信学习linux是边用边学，所以在使用过程中要查阅<a href="https://wangchujiang.com/linux-command/">linux command</a></p>
-<h1 id="bacisal">Bacisal<a class="headerlink" href="#bacisal" title="Permanent link">&para;</a></h1>
-<h2 id="linux">linux内核<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h2>
-<p><a href="https://www.kernel.org/"><em>Linux</em> kernel</a></p>
-<table>
-<thead>
-<tr>
-<th>command</th>
-<th>parameter</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>uname</td>
-<td>-r</td>
-</tr>
-</tbody>
-</table>
-<h2 id="linux_1">Linux 权限<a class="headerlink" href="#linux_1" title="Permanent link">&para;</a></h2>
-<h3 id="users">Users<a class="headerlink" href="#users" title="Permanent link">&para;</a></h3>
-<p><code>/etc</code>文件夹下的三个文件</p>
-<p><img src="./graph/linux_basical_passwd.png" width="650px"></p>
-<table>
-<thead>
-<tr>
-<th>修改用户权限的命令</th>
-<th>修改用户组权限的命令</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>useradd</td>
-<td>groupadd</td>
-</tr>
-<tr>
-<td>passwd</td>
-<td>groupmod</td>
-</tr>
-<tr>
-<td>chage</td>
-<td>groupdel</td>
-</tr>
-<tr>
-<td>usermod</td>
-<td>gpasswd</td>
-</tr>
-<tr>
-<td>userdel</td>
-<td></td>
-</tr>
-<tr>
-<td>id</td>
-<td></td>
-</tr>
-<tr>
-<td>chfn</td>
-<td></td>
-</tr>
-<tr>
-<td>chsh</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id="file">File<a class="headerlink" href="#file" title="Permanent link">&para;</a></h3>
-<p>一个文件的权限</p>
-<p><img src="./graph/file_power.png" width="350px"></p>
-<p><img src="./graph/file_power_1.png" width="350px"></p>
-<blockquote>
-<p><em>文件大小为Bytes</em></p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>文件类型</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>d</td>
-<td>目录</td>
-</tr>
-<tr>
-<td>-</td>
-<td>文件</td>
-</tr>
-<tr>
-<td>l</td>
-<td>连接文件</td>
-</tr>
-<tr>
-<td>b</td>
-<td>设备文件里可供存储的周边设备</td>
-</tr>
-<tr>
-<td>c</td>
-<td>设备文件里的串行端口设备</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>权限类型</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>r</td>
-<td>read</td>
-</tr>
-<tr>
-<td>w</td>
-<td>write</td>
-</tr>
-<tr>
-<td>x</td>
-<td>execute</td>
-</tr>
-</tbody>
-</table>
-<h4 id="_2">修改文件权限和属性<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
-<ul>
-<li>
-<p>chgrp：修改文件所属用户组
-<div class="highlight"><pre><span></span><code>chgrp <span class="o">[</span>-R<span class="o">]</span> <span class="o">[</span>用户组<span class="o">]</span> dirname/filename
-</code></pre></div></p>
-</li>
-<li>
-<p>chown
-<div class="highlight"><pre><span></span><code>chown <span class="o">[</span>-R<span class="o">]</span> 账号名称:用户组名称 dirname/filename
-</code></pre></div></p>
-</li>
-<li>
-<p>chmod </p>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>chmod</th>
-<th>-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>u,g,o,a</td>
-<td>user, group, other, all</td>
-</tr>
-<tr>
-<td>+, -, =</td>
-<td>加入，移除，设置</td>
-</tr>
-<tr>
-<td>r, w, x</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<div class="highlight"><pre><span></span><code><span class="nv">rwx</span> <span class="o">=</span> <span class="m">4</span> + <span class="m">2</span> + <span class="nv">1</span> <span class="o">=</span> <span class="m">7</span>
+<h1 id="ubuntuwireguard">在ubuntu上使用wireguard<a class="headerlink" href="#ubuntuwireguard" title="Permanent link">&para;</a></h1>
+<h3 id="ini">配置使用<a href="https://zh.wikipedia.org/wiki/INI%E6%96%87%E4%BB%B6">INI</a>格式<a class="headerlink" href="#ini" title="Permanent link">&para;</a></h3>
+<h4 id="client">client<a class="headerlink" href="#client" title="Permanent link">&para;</a></h4>
+<p>配置文件<code>/etc/wireguard/wg0.conf</code>内容如下</p>
+<div class="highlight"><pre><span></span><code>[Interface]
+PrivateKey = xxxxxxxxxxxxxxxxxxxxxxxxxx
+DNS = 8.8.8.8
+Address = 10.0.0.2/24
 
-chmod <span class="m">777</span> .bashrc
+# azure vps服务器
+[Peer]
+PublicKey = xxxxxxxxxxxxxxxxxxxxxxxxxx 
+AllowedIPs = 0.0.0.0/0, ::0/0 # 转发所有流量
+Endpoint = server_ip：port # 这里要替换成实际使用的ip和端口号
+PersistentKeepalive = 25
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>chmod <span class="nv">u</span><span class="o">=</span>rwx, <span class="nv">go</span><span class="o">=</span>rx .bashrc
-chmod a+w .bashrc
-chmod a-x .bashrc
+<h4 id="server">server<a class="headerlink" href="#server" title="Permanent link">&para;</a></h4>
+<p>配置文件<code>/etc/wireguard/wg0.conf</code>内容如下</p>
+<div class="highlight"><pre><span></span><code>[Interface]
+ListenPort = 51820
+PrivateKey = xxxxxxxxxxxxxxxxxxxxxxxxxx
+Address = 10.0.0.1/24
+PostUp   = iptables -A FORWARD -i %i -j ACCEPT; iptables -A FORWARD -o %i -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+PostDown = iptables -D FORWARD -i %i -j ACCEPT; iptables -D FORWARD -o %i -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
+
+
+[Peer]
+PublicKey = xxxxxxxxxxxxxxxxxxxxxxxxxx
+AllowedIPs = 10.0.0.2/32 # 与浙大玉泉校区则通过楼503 ubuntu的Address差不多
 </code></pre></div>
-<h5 id="_3">文件权限和目录权限<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h5>
-<table>
-<thead>
-<tr>
-<th>-</th>
-<th>file</th>
-<th>directory</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>r</td>
-<td>读取文件内容</td>
-<td>读取文件名</td>
-</tr>
-<tr>
-<td>w</td>
-<td>修改文件内容</td>
-<td>修改文件名</td>
-</tr>
-<tr>
-<td>x</td>
-<td>执行文件</td>
-<td>进入目录</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>如果你拥有一个目录的权限，但是没有其中文件的权限，可以删除文件</li>
-<li>读取一个目录里的文件，一般至少需要目录的rx权限</li>
+<p>在服务器上开启流量转发</p>
+<div class="highlight"><pre><span></span><code>$ <span class="nb">echo</span> <span class="s2">&quot;net.ipv4.ip_forward = 1&quot;</span> &gt;&gt; /etc/sysctl.conf
+$ <span class="nb">echo</span> <span class="s2">&quot;net.ipv4.conf.all.proxy_arp = 1&quot;</span> &gt;&gt; /etc/sysctl.conf
+$ sysctl -p /etc/sysctl.conf
+</code></pre></div>
+<h4 id="_1">字段<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<ol>
+<li>我的理解是wireguard配置后的结果是一对虚拟网卡，其中<code>Interface</code>和<code>Peer</code>分别作用于配置自己这一端网卡的信息和对端的网卡信息。其中：<ul>
+<li><code>PrivateKey</code> : 私钥由<code>wg keygen</code> 生成</li>
+<li><code>PublicKey</code>  : 公钥 <code>wg pubkey</code> 生成</li>
 </ul>
-<p><a href="https://zh.wikipedia.org/wiki/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84%E6%A0%87%E5%87%86">linux的文件放置标准FHS</a></p>
-<p>或许可以挑战一下 <a href="https://wiki.linuxfoundation.org/lsb/fhs-30">Filesystem Hierarchy Standard 3.0</a> 的阅读</p>
-<p><em>/usr是UNIX Software Resource</em></p>
-<ul>
-<li>一张Filesystem Hierarchy Standard的图片</li>
-</ul>
-<p><img src="./graph/empty.png" width="350px"></p>
+</li>
+<li>
+<p>wireguard的原理是先使用<code>PrivateKey</code>和<code>PublicKey</code>确认身份，然后再商量一个共同的密钥来加密。(因为单个密钥(私钥)的加密算法比公钥加密算法快)。 使用的时候<code>Interface</code>下面应该填写自己的私钥，<code>Peer</code>下面应该填写对方的公钥。</p>
+</li>
+<li>
+<p><code>PostUp</code>和<code>PostDown</code>是一个网卡启动前和启动后所执行的命令。</p>
+</li>
+<li><code>AllowedIPs</code>是允许哪些字段的流量发送过来，所以server端下面的<code>AllowedIPs</code>
+和client下面的<code>Address</code>相同</li>
+<li><code>ListenPort</code>是协议的端口号</li>
+<li><code>Endpoint</code>是服务器的ip地址，其实wireguard是P2P协议</li>
+<li><strong><code>DNS</code>: 第一次没有设置的时候vpn可以ping通国内网络，但是不能ping通国外网络，设置之后就好了</strong></li>
+<li><code>PersistentKeepalive</code>是检查连接时间的设置</li>
+</ol>
+<h4 id="_2">启动与停止<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<p>启动</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># wg-quick up wg0</span>
+</code></pre></div>
+<p>停止
+<div class="highlight"><pre><span></span><code><span class="c1"># wg-quick down wg0</span>
+</code></pre></div></p>
+<p>查看效果</p>
+<div class="highlight"><pre><span></span><code>➜  ubuntu git:<span class="o">(</span>master<span class="o">)</span> ✗ sudo wg             
+<span class="o">[</span>sudo<span class="o">]</span> password <span class="k">for</span> wtog: 
+interface: wg0
+  public key: 3JuY6/TwE5xj2chaqvlTMEmBN3eF8ebrMz5/5VlB1U4<span class="o">=</span>
+  private key: <span class="o">(</span>hidden<span class="o">)</span>
+  listening port: <span class="m">38426</span>
+  fwmark: 0xca6c
+
+peer: <span class="nv">ULoeh3bKsZypRw4byT3HlZcNByt0VcP18RSTgyuzj0Y</span><span class="o">=</span>
+  endpoint: <span class="m">20</span>.89.136.250:51820
+  allowed ips: <span class="m">0</span>.0.0.0/0, ::/0
+  latest handshake: <span class="m">30</span> seconds ago
+  transfer: <span class="m">13</span>.58 MiB received, <span class="m">2</span>.23 MiB sent
+  persistent keepalive: every <span class="m">25</span> seconds
+➜  ubuntu git:<span class="o">(</span>master<span class="o">)</span> ✗ 
+</code></pre></div>
+<h3 id="_3">参考资料<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p><a href="https://www.wireguard.com/">wireguard official</a></p>
+<p><a href="https://www.myfreax.com/how-to-set-up-wireguard-vpn-on-ubuntu-20-04/">wireguard 配置vpn</a></p>
 
 
 
@@ -877,7 +879,7 @@ chmod a-x .bashrc
     <nav class="md-footer__inner md-grid" aria-label="页脚" >
       
         
-        <a href="../../gplusplus_link_compile/gplusplus/" class="md-footer__link md-footer__link--prev" aria-label="上一页: g++编译与链接" rel="prev">
+        <a href="../linux-network/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 网络基础" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -886,20 +888,20 @@ chmod a-x .bashrc
               <span class="md-footer__direction">
                 上一页
               </span>
-              g++编译与链接
+              网络基础
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../process_thread/basical/" class="md-footer__link md-footer__link--next" aria-label="下一页: 线程和进程" rel="next">
+        <a href="../../linux/gplusplus_link_compile/gplusplus/" class="md-footer__link md-footer__link--next" aria-label="下一页: g++编译与链接" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              线程和进程
+              g++编译与链接
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -944,12 +946,12 @@ chmod a-x .bashrc
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.078830c0.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.078830c0.min.js"></script>
       
-        <script src="../../../../mkdocs/javascripts/mathjax.js"></script>
+        <script src="../../../mkdocs/javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
