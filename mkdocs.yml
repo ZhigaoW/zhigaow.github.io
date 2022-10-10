@@ -49,6 +49,7 @@ nav:
   - 计算机:
     - 程序设计语言: 
       - trpl: computer_science/programming_language/trpl/trpl.md 
+      - html: computer_science/programming_language/html/html.md
     - 网络: 
       - io_uring详解: computer_science/network/io_uring.md
       - 网络基础: computer_science/network/linux-network.md
