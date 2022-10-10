@@ -218,7 +218,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../network/io_uring/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../programming_language/trpl/trpl/" class="md-tabs__link md-tabs__link--active">
         计算机
       </a>
     </li>
@@ -311,6 +311,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_1">
@@ -341,19 +343,70 @@
         
           
         
-          
-        
-          
-        
       
       
         <label class="md-nav__link" for="__nav_1_1">
+          程序设计语言
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="程序设计语言" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          程序设计语言
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming_language/trpl/trpl/" class="md-nav__link">
+        the rust programming language
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_2" type="checkbox" id="__nav_1_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_2">
           网络
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="网络" data-md-level="2">
-        <label class="md-nav__title" for="__nav_1_1">
+        <label class="md-nav__title" for="__nav_1_2">
           <span class="md-nav__icon md-icon"></span>
           网络
         </label>
@@ -417,7 +470,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_2" type="checkbox" id="__nav_1_2" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_3" type="checkbox" id="__nav_1_3" checked>
       
       
       
@@ -432,13 +485,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_1_2">
+        <label class="md-nav__link" for="__nav_1_3">
           linux
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="linux" data-md-level="2">
-        <label class="md-nav__title" for="__nav_1_2">
+        <label class="md-nav__title" for="__nav_1_3">
           <span class="md-nav__icon md-icon"></span>
           linux
         </label>
@@ -518,7 +571,7 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3" type="checkbox" id="__nav_1_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_4" type="checkbox" id="__nav_1_4" checked>
       
       
       
@@ -527,13 +580,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_1_3">
+        <label class="md-nav__link" for="__nav_1_4">
           database
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="database" data-md-level="2">
-        <label class="md-nav__title" for="__nav_1_3">
+        <label class="md-nav__title" for="__nav_1_4">
           <span class="md-nav__icon md-icon"></span>
           database
         </label>
@@ -1022,7 +1075,7 @@
 </ol>
 <h3 id="_3">问题一<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <h4 id="file-storage">File Storage<a class="headerlink" href="#file-storage" title="Permanent link">&para;</a></h4>
-<p><img src="./graph/01-storage/01.png" width="600px"  /></p>
+<p><img alt="" src="../graph/01-storage/01.png" /></p>
 <ul>
 <li>使用<strong>buffer pool</strong>的原因是使内存看起来能装下所有的文件。</li>
 <li>如果操作系统的虚拟内存机制<ul>
@@ -1037,9 +1090,9 @@
 <li>Log-structured </li>
 </ul>
 <h5 id="tuple-oriented">Tuple-oriented<a class="headerlink" href="#tuple-oriented" title="Permanent link">&para;</a></h5>
-<p><img src="./graph/01-storage/02.png" width="250px" /></p>
+<p><img alt="" src="../graph/01-storage/02.png" /></p>
 <h5 id="log-structured">Log-structured<a class="headerlink" href="#log-structured" title="Permanent link">&para;</a></h5>
-<p><img src="./graph/01-storage/04.png" width="250px" /></p>
+<p><img alt="" src="../graph/01-storage/04.png" /></p>
 <p><em>优点</em></p>
 <ul>
 <li>速度块<ul>
@@ -1054,11 +1107,11 @@
 <p><em>缺点</em>
 - 读取慢</p>
 <h4 id="tuple-layout">Tuple Layout<a class="headerlink" href="#tuple-layout" title="Permanent link">&para;</a></h4>
-<p><img src="./graph/01-storage/03.png" width="250px" /></p>
+<p><img alt="" src="../graph/01-storage/03.png" /></p>
 <p>数据库中存储大文件的方法</p>
-<p><img src="./graph/01-storage/06.png" width="250px" /></p>
+<p><img alt="" src="../graph/01-storage/06.png" /></p>
 <h4 id="data-representation">Data Representation<a class="headerlink" href="#data-representation" title="Permanent link">&para;</a></h4>
-<p><img src="./graph/01-storage/05.png" width="600px"  /></p>
+<p><img alt="" src="../graph/01-storage/05.png" /></p>
 <h4 id="workload">数据库的Workload<a class="headerlink" href="#workload" title="Permanent link">&para;</a></h4>
 <p><strong>On-Line Transaction Processing (OLTP)</strong>
 - Fast operations that only read/update a small amount of data each time.</p>
@@ -1068,35 +1121,18 @@
 </ul>
 <p><strong>Hybrid Transaction + Analytical Processing</strong>
 - OLTP + OLAP together on the same database instance</p>
-<p><img src="./graph/01-storage/07.png" width="600px"  /></p>
+<p><img alt="" src="../graph/01-storage/07.png" /></p>
 <p>行存储的tuple做OLTP很快，但是做OLAP会读取没用的数据进入内存，浪费资源</p>
 <h3 id="_4">问题二<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <h4 id="buffer-pool-manager">Buffer Pool Manager<a class="headerlink" href="#buffer-pool-manager" title="Permanent link">&para;</a></h4>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-大多数数据库使不使用direct I/O(<a href="https://linux.die.net/man/2/open">O_DIRECT</a>)，优点和缺点分别是什么???</p>
+<p>大多数数据库使不使用direct I/O(<a href="https://linux.die.net/man/2/open">O_DIRECT</a>)，优点和缺点分别是什么???</p>
 <h4 id="replacement-policies">Replacement Policies<a class="headerlink" href="#replacement-policies" title="Permanent link">&para;</a></h4>
 <h4 id="other-memory-pools">Other Memory Pools<a class="headerlink" href="#other-memory-pools" title="Permanent link">&para;</a></h4>
 <h2 id="_5">数据库的索引<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<p>=======
-维护一些数据
+<p>维护一些数据
 - Dirty Flag: 我们从磁盘中读取page后，page是否被修改
 - Pin/Reference Counter: 跟踪当前page的线程数量或者正在查询该page的数量</p>
 <h4 id="replacement-policies_1">Replacement Policies<a class="headerlink" href="#replacement-policies_1" title="Permanent link">&para;</a></h4>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>af972fb03d4b154f12b3c26cf4d8a4cb54d77f70</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
 <h4 id="other-memory-pools_1">Other Memory Pools<a class="headerlink" href="#other-memory-pools_1" title="Permanent link">&para;</a></h4>
 
 
