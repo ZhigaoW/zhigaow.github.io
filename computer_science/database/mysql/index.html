@@ -12,14 +12,14 @@
         <meta name="author" content="Wang Zhigao">
       
       
-        <link rel="canonical" href="https://zhigaow.github.io/computer_science/database/mechanism/">
+        <link rel="canonical" href="https://zhigaow.github.io/computer_science/database/mysql/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
     
     
       
-        <title>原理 - Wang Zhigao's Note</title>
+        <title>MySQL - Wang Zhigao's Note</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#mysql" class="md-skip">
           跳转至
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              原理
+              MySQL
             
           </span>
         </div>
@@ -205,8 +205,6 @@
         
   
   
-    
-  
 
 
   
@@ -218,7 +216,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../programming_language/trpl/trpl/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../programming_language/trpl/trpl/" class="md-tabs__link">
         计算机
       </a>
     </li>
@@ -293,14 +291,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
       
       
       
@@ -580,14 +576,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_4" type="checkbox" id="__nav_1_4" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_4" type="checkbox" id="__nav_1_4" checked>
       
       
       
@@ -612,180 +606,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          原理
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../mechanism/" class="md-nav__link">
         原理
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    数据库的存储
-  </a>
-  
-    <nav class="md-nav" aria-label="数据库的存储">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    问题一
-  </a>
-  
-    <nav class="md-nav" aria-label="问题一">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#file-storage" class="md-nav__link">
-    File Storage
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#page-layout" class="md-nav__link">
-    Page Layout
-  </a>
-  
-    <nav class="md-nav" aria-label="Page Layout">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tuple-oriented" class="md-nav__link">
-    Tuple-oriented
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#log-structured" class="md-nav__link">
-    Log-structured
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tuple-layout" class="md-nav__link">
-    Tuple Layout
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-representation" class="md-nav__link">
-    Data Representation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#workload" class="md-nav__link">
-    数据库的Workload
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    问题二
-  </a>
-  
-    <nav class="md-nav" aria-label="问题二">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#buffer-pool-manager" class="md-nav__link">
-    Buffer Pool Manager
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#replacement-policies" class="md-nav__link">
-    Replacement Policies
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#other-memory-pools" class="md-nav__link">
-    Other Memory Pools
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    数据库的索引
-  </a>
-  
-    <nav class="md-nav" aria-label="数据库的索引">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hash-tables" class="md-nav__link">
-    HASH TABLES
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -904,149 +729,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    数据库的存储
-  </a>
-  
-    <nav class="md-nav" aria-label="数据库的存储">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    问题一
-  </a>
-  
-    <nav class="md-nav" aria-label="问题一">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#file-storage" class="md-nav__link">
-    File Storage
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#page-layout" class="md-nav__link">
-    Page Layout
-  </a>
-  
-    <nav class="md-nav" aria-label="Page Layout">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tuple-oriented" class="md-nav__link">
-    Tuple-oriented
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#log-structured" class="md-nav__link">
-    Log-structured
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tuple-layout" class="md-nav__link">
-    Tuple Layout
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-representation" class="md-nav__link">
-    Data Representation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#workload" class="md-nav__link">
-    数据库的Workload
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    问题二
-  </a>
-  
-    <nav class="md-nav" aria-label="问题二">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#buffer-pool-manager" class="md-nav__link">
-    Buffer Pool Manager
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#replacement-policies" class="md-nav__link">
-    Replacement Policies
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#other-memory-pools" class="md-nav__link">
-    Other Memory Pools
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    数据库的索引
-  </a>
-  
-    <nav class="md-nav" aria-label="数据库的索引">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hash-tables" class="md-nav__link">
-    HASH TABLES
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1062,95 +744,13 @@
 
 
 
-  <a href="https://github.com/zhigaow/zhigaow.github.io/edit/main/docs/computer_science/database/mechanism.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/zhigaow/zhigaow.github.io/edit/main/docs/computer_science/database/mysql.md" title="编辑此页" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="_1">数据库系统概论<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="_2">数据库的存储<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p><strong>磁盘作为基础存储的</strong>数据库系统的存储涉及两个问题</p>
-<ol>
-<li>数据如何在磁盘上表示(How the DBMS represents the database in files on disk.) </li>
-<li>如何从磁盘和内存之间反复移动数据 (How the DBMS manages its memory and moves data back-and-forth from disk.) </li>
-</ol>
-<h3 id="_3">问题一<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<h4 id="file-storage">File Storage<a class="headerlink" href="#file-storage" title="Permanent link">&para;</a></h4>
-<p><img alt="" src="../graph/01-storage/01.png" /></p>
-<ul>
-<li>使用<strong>buffer pool</strong>的原因是使内存看起来能装下所有的文件。</li>
-<li>如果操作系统的虚拟内存机制<ul>
-<li>有可能半页（database page）被换出，需要加锁，影响性能。</li>
-</ul>
-</li>
-</ul>
-<h4 id="page-layout">Page Layout<a class="headerlink" href="#page-layout" title="Permanent link">&para;</a></h4>
-<p>最少有两种方式存储 Page </p>
-<ul>
-<li>Tuple-oriented</li>
-<li>Log-structured </li>
-</ul>
-<h5 id="tuple-oriented">Tuple-oriented<a class="headerlink" href="#tuple-oriented" title="Permanent link">&para;</a></h5>
-<p><img alt="" src="../graph/01-storage/02.png" /></p>
-<h5 id="log-structured">Log-structured<a class="headerlink" href="#log-structured" title="Permanent link">&para;</a></h5>
-<p><img alt="" src="../graph/01-storage/04.png" /></p>
-<p><em>优点</em></p>
-<ul>
-<li>速度块<ul>
-<li>如果是Tuple-oriented类型的数据库，我们有十条数据要更新，但是十条数据在十个不同的page上，那么我们需要将每一个page读取到内存里，然后再写回去。但是如果是Log-structured类型的数据库，我们只需要将数据添加到一个新的page上。</li>
-</ul>
-</li>
-<li>分布式系统常用<ul>
-<li>分布式系统没法访问每个数据存储的位置，所以采用log的形式追加。[??? 为啥不能访问每个数据的位置]</li>
-</ul>
-</li>
-</ul>
-<p><em>缺点</em>
-- 读取慢</p>
-<h4 id="tuple-layout">Tuple Layout<a class="headerlink" href="#tuple-layout" title="Permanent link">&para;</a></h4>
-<p><img alt="" src="../graph/01-storage/03.png" /></p>
-<p>数据库中存储大文件的方法</p>
-<p><img alt="" src="../graph/01-storage/06.png" /></p>
-<h4 id="data-representation">Data Representation<a class="headerlink" href="#data-representation" title="Permanent link">&para;</a></h4>
-<p><img alt="" src="../graph/01-storage/05.png" /></p>
-<h4 id="workload">数据库的Workload<a class="headerlink" href="#workload" title="Permanent link">&para;</a></h4>
-<p><strong>On-Line Transaction Processing (OLTP)</strong>
-- Fast operations that only read/update a small amount of data each time.</p>
-<p><strong>On-Line Analytical Processing (OLAP)</strong></p>
-<ul>
-<li>Complex queries that read a lot of data to compute aggregates.</li>
-</ul>
-<p><strong>Hybrid Transaction + Analytical Processing</strong>
-- OLTP + OLAP together on the same database instance</p>
-<p><img alt="" src="../graph/01-storage/07.png" /></p>
-<p>行存储的tuple做OLTP很快，但是做OLAP会读取没用的数据进入内存，浪费资源</p>
-<h3 id="_4">问题二<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<h4 id="buffer-pool-manager">Buffer Pool Manager<a class="headerlink" href="#buffer-pool-manager" title="Permanent link">&para;</a></h4>
-<p>大多数数据库使不使用direct I/O(<a href="https://linux.die.net/man/2/open">O_DIRECT</a>)，优点和缺点分别是什么???</p>
-<h4 id="replacement-policies">Replacement Policies<a class="headerlink" href="#replacement-policies" title="Permanent link">&para;</a></h4>
-<h4 id="other-memory-pools">Other Memory Pools<a class="headerlink" href="#other-memory-pools" title="Permanent link">&para;</a></h4>
-<h2 id="_5">数据库的索引<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<p>数据库一共有5层</p>
-<p><img alt="" src="../graph/02-access/01.png" /></p>
-<p><strong>Data Organization</strong></p>
-<p><strong>Concurrency</strong></p>
-<h3 id="hash-tables">HASH TABLES<a class="headerlink" href="#hash-tables" title="Permanent link">&para;</a></h3>
-<p>哈希函数的时间复杂度平均是O(1)，最坏的情况下是O(n)。
-但是O(1)也有很大的不同的。一个HASH函数要点</p>
-<ul>
-<li>Hash Function</li>
-<li>Hash Scheme(collisions)</li>
-</ul>
-<p>现在常用的Hash函数</p>
-<p><img alt="" src="../graph/02-access/02.png" /></p>
-<p>现在最快的是 <a href="https://github.com/Cyan4973/xxHash">xxHash3</a></p>
-<p>因为key-value不是一对一的，那么我们如何处理non-unique-keys的情况呢</p>
-<ol>
-<li>使用一个单独的Value的链表</li>
-<li>记录多个key</li>
-</ol>
-<p><img alt="" src="../graph/02-access/03.png" /></p>
+<h1 id="mysql">MySQL<a class="headerlink" href="#mysql" title="Permanent link">&para;</a></h1>
 
 
 
@@ -1171,42 +771,6 @@
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="页脚" >
-      
-        
-        <a href="../../linux/vim/vim/" class="md-footer__link md-footer__link--prev" aria-label="上一页: vim" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                上一页
-              </span>
-              vim
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../../../about/" class="md-footer__link md-footer__link--next" aria-label="下一页: Index" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                下一页
-              </span>
-              Index
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

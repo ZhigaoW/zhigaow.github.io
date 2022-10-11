@@ -2,77 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://zhigaow.github.io/</loc>
-         <lastmod>2022-10-10</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://zhigaow.github.io/about/</loc>
-         <lastmod>2022-10-10</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://zhigaow.github.io/about/cv-full/</loc>
-         <lastmod>2022-10-10</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://zhigaow.github.io/about/support/</loc>
-         <lastmod>2022-10-10</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://zhigaow.github.io/computer_science/database/IMPLEMENTATION/</loc>
-         <lastmod>2022-10-10</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://zhigaow.github.io/computer_science/database/mechanism/</loc>
-         <lastmod>2022-10-10</lastmod>
+         <lastmod>2022-10-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://zhigaow.github.io/computer_science/database/mysql/</loc>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://zhigaow.github.io/computer_science/linux/gplusplus_link_compile/gplusplus/</loc>
-         <lastmod>2022-10-10</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://zhigaow.github.io/computer_science/linux/linux_cmd/linux_basical/</loc>
-         <lastmod>2022-10-10</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://zhigaow.github.io/computer_science/linux/process_thread/basical/</loc>
-         <lastmod>2022-10-10</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://zhigaow.github.io/computer_science/linux/vim/vim/</loc>
-         <lastmod>2022-10-10</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://zhigaow.github.io/computer_science/network/io_uring/</loc>
-         <lastmod>2022-10-10</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://zhigaow.github.io/computer_science/network/linux-network/</loc>
-         <lastmod>2022-10-10</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://zhigaow.github.io/computer_science/network/wireguard/</loc>
-         <lastmod>2022-10-10</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://zhigaow.github.io/computer_science/programming_language/html/html/</loc>
-         <lastmod>2022-10-10</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://zhigaow.github.io/computer_science/programming_language/trpl/trpl/</loc>
-         <lastmod>2022-10-10</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
