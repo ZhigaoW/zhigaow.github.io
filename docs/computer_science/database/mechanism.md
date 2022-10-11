@@ -105,18 +105,41 @@
 #### Other Memory Pools
 
 
-## 数据库的索引
+## 数据库的索引 
 
-维护一些数据
-- Dirty Flag: 我们从磁盘中读取page后，page是否被修改
-- Pin/Reference Counter: 跟踪当前page的线程数量或者正在查询该page的数量
+数据库一共有5层
 
-#### Replacement Policies
+![](./graph/02-access/01.png)
 
 
+**Data Organization**
+
+**Concurrency**
+
+### HASH TABLES
+
+哈希函数的时间复杂度平均是O(1)，最坏的情况下是O(n)。
+但是O(1)也有很大的不同的。一个HASH函数要点
+
+- Hash Function
+- Hash Scheme(collisions)
+
+现在常用的Hash函数
 
 
-#### Other Memory Pools
+![](./graph/02-access/02.png)
+
+现在最快的是 [xxHash3](https://github.com/Cyan4973/xxHash)
+
+因为key-value不是一对一的，那么我们如何处理non-unique-keys的情况呢
+
+1. 使用一个单独的Value的链表
+2. 记录多个key
+
+![](./graph/02-access/03.png)
+
+
+
 
 
 
