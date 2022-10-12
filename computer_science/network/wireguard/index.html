@@ -416,6 +416,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_1_2">
@@ -549,6 +551,20 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iptables/" class="md-nav__link">
+        iptables
+      </a>
     </li>
   
 
@@ -899,13 +915,13 @@
 <h4 id="client">client<a class="headerlink" href="#client" title="Permanent link">&para;</a></h4>
 <p>配置文件<code>/etc/wireguard/wg0.conf</code>内容如下</p>
 <div class="highlight"><pre><span></span><code>[Interface]
-PrivateKey = xxxxxxxxxxxxxxxxxxxxxxxxxx
+PrivateKey = xxxxxxxxxxxxxxxxxxxxxxxxxx # client 端口的私钥
 DNS = 8.8.8.8
 Address = 10.0.0.2/24
 
 # azure vps服务器
 [Peer]
-PublicKey = xxxxxxxxxxxxxxxxxxxxxxxxxx 
+PublicKey = xxxxxxxxxxxxxxxxxxxxxxxxxx # server 端口的私钥
 AllowedIPs = 0.0.0.0/0, ::0/0 # 转发所有流量
 Endpoint = server_ip：port # 这里要替换成实际使用的ip和端口号
 PersistentKeepalive = 25
@@ -914,14 +930,14 @@ PersistentKeepalive = 25
 <p>配置文件<code>/etc/wireguard/wg0.conf</code>内容如下</p>
 <div class="highlight"><pre><span></span><code>[Interface]
 ListenPort = 51820
-PrivateKey = xxxxxxxxxxxxxxxxxxxxxxxxxx
-Address = 10.0.0.1/24
+PrivateKey = xxxxxxxxxxxxxxxxxxxxxxxxxx # server 端口的私钥
+Address = 10.0.0.1/24 
 PostUp   = iptables -A FORWARD -i %i -j ACCEPT; iptables -A FORWARD -o %i -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 PostDown = iptables -D FORWARD -i %i -j ACCEPT; iptables -D FORWARD -o %i -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
 
 
 [Peer]
-PublicKey = xxxxxxxxxxxxxxxxxxxxxxxxxx
+PublicKey = xxxxxxxxxxxxxxxxxxxxxxxxxx # client 端口的公钥
 AllowedIPs = 10.0.0.2/32 # 与浙大玉泉校区则通过楼503 ubuntu的Address差不多
 </code></pre></div>
 <p>在服务器上开启流量转发</p>
@@ -1017,13 +1033,13 @@ peer: <span class="nv">ULoeh3bKsZypRw4byT3HlZcNByt0VcP18RSTgyuzj0Y</span><span c
       
       
         
-        <a href="../../linux/gplusplus_link_compile/gplusplus/" class="md-footer__link md-footer__link--next" aria-label="下一页: g++编译与链接" rel="next">
+        <a href="../iptables/" class="md-footer__link md-footer__link--next" aria-label="下一页: iptables" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              g++编译与链接
+              iptables
             </div>
           </div>
           <div class="md-footer__button md-icon">
