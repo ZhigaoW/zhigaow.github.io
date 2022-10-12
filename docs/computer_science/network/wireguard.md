@@ -1,5 +1,6 @@
 # 在ubuntu上使用wireguard
 
+
 ### 配置使用[INI](https://zh.wikipedia.org/wiki/INI%E6%96%87%E4%BB%B6)格式
 
 #### client
@@ -8,13 +9,13 @@
 
 ```
 [Interface]
-PrivateKey = xxxxxxxxxxxxxxxxxxxxxxxxxx
+PrivateKey = xxxxxxxxxxxxxxxxxxxxxxxxxx # client 端口的私钥
 DNS = 8.8.8.8
 Address = 10.0.0.2/24
 
 # azure vps服务器
 [Peer]
-PublicKey = xxxxxxxxxxxxxxxxxxxxxxxxxx 
+PublicKey = xxxxxxxxxxxxxxxxxxxxxxxxxx # server 端口的私钥
 AllowedIPs = 0.0.0.0/0, ::0/0 # 转发所有流量
 Endpoint = server_ip：port # 这里要替换成实际使用的ip和端口号
 PersistentKeepalive = 25
@@ -27,14 +28,14 @@ PersistentKeepalive = 25
 ```
 [Interface]
 ListenPort = 51820
-PrivateKey = xxxxxxxxxxxxxxxxxxxxxxxxxx
-Address = 10.0.0.1/24
+PrivateKey = xxxxxxxxxxxxxxxxxxxxxxxxxx # server 端口的私钥
+Address = 10.0.0.1/24 
 PostUp   = iptables -A FORWARD -i %i -j ACCEPT; iptables -A FORWARD -o %i -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 PostDown = iptables -D FORWARD -i %i -j ACCEPT; iptables -D FORWARD -o %i -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
 
 
 [Peer]
-PublicKey = xxxxxxxxxxxxxxxxxxxxxxxxxx
+PublicKey = xxxxxxxxxxxxxxxxxxxxxxxxxx # client 端口的公钥
 AllowedIPs = 10.0.0.2/32 # 与浙大玉泉校区则通过楼503 ubuntu的Address差不多
 ```
 
