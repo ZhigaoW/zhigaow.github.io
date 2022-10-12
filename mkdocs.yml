@@ -54,6 +54,7 @@ nav:
       - io_uring详解: computer_science/network/io_uring.md
       - 网络基础: computer_science/network/linux-network.md
       - wireguard: computer_science/network/wireguard.md
+      - iptables: computer_science/network/iptables.md
     - linux:
       - g++编译与链接: computer_science/linux/gplusplus_link_compile/gplusplus.md
       - linux命令行: computer_science/linux/linux_cmd/linux_basical.md

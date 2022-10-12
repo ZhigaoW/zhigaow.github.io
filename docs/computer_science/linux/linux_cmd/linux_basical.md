@@ -3,6 +3,7 @@
 
 # Bacisal
 ## linux内核    
+
 [*Linux* kernel](https://www.kernel.org/)
 
 | command | parameter |
@@ -17,7 +18,7 @@
 
 `/etc`文件夹下的三个文件
 
-<img src="./graph/linux_basical_passwd.png" width="650px">
+![](./graph/linux_basical_passwd.png)
 
 
 | 修改用户权限的命令 | 修改用户组权限的命令 |
@@ -44,9 +45,9 @@
 
 一个文件的权限
 
-<img src="./graph/file_power.png" width="350px">
+![](./graph/file_power.png):
 
-<img src="./graph/file_power_1.png" width="350px">
+![](./graph/file_power_1.png):
 
 > *文件大小为Bytes*
 
@@ -118,7 +119,7 @@ chmod a-x .bashrc
 - 一张Filesystem Hierarchy Standard的图片
 
 
-<img src="./graph/empty.png" width="350px">
+![](./graph/empty.png):
 
 
 
