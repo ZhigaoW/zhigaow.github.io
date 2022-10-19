@@ -55,13 +55,14 @@ nav:
       - 网络基础: computer_science/network/linux-network.md
       - wireguard: computer_science/network/wireguard.md
       - iptables: computer_science/network/iptables.md
-    - linux:
+    - database:
+      - 原理: computer_science/database/mechanism.md
+    - os-linux:
       - g++编译与链接: computer_science/linux/gplusplus_link_compile/gplusplus.md
       - linux命令行: computer_science/linux/linux_cmd/linux_basical.md
       - 线程和进程: computer_science/linux/process_thread/basical.md
       - vim: computer_science/linux/vim/vim.md
-    - database:
-      - 原理: computer_science/database/mechanism.md
+    - os-xv6:
   - 关于:
     - about/index.md # 使用两个index 这样子左上角第一次打开会是所有Tab 而不是About
     - 个人履历: about/cv-full.md
