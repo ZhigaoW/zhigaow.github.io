@@ -125,11 +125,11 @@
 面试成功不成功不是你**真正**行不行
 
 
+>每个人都应该登上属于自己的那座山，看到属于自己的风景
 
+晋升->有潜力
 
-
-
-
+[xv6](https://th0ar.gitbooks.io/xv6-chinese/content/index.html)
 
 
 
