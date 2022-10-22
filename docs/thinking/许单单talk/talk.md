@@ -131,7 +131,7 @@
 
 [xv6](https://th0ar.gitbooks.io/xv6-chinese/content/index.html)
 
-
+任何事情都有对象和对手（对象和对手都是人）
 
 
 
