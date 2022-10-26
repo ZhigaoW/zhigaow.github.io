@@ -63,7 +63,7 @@ nav:
       - 线程和进程: computer_science/linux/process_thread/basical.md
       - vim: computer_science/linux/vim/vim.md
   - 思考:
-    - 许单单的talk: thinking/
+    - 许单单的talk: 
   - 关于:
     - about/index.md # 使用两个index 这样子左上角第一次打开会是所有Tab 而不是About
     - 个人履历: about/cv-full.md
