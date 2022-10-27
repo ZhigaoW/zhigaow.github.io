@@ -4,7 +4,7 @@
 
 ## 1. 成功背后的根本逻辑
 
-<img src="./picture/01.png" width="300px">
+![](./picture/01.png)
 
 
 知识完全不等同与认知
@@ -20,7 +20,7 @@
 
 成功是什么，成功是一系列的正反馈
 
-<img src="./picture/02.png" width="300px">
+![](./picture/02.png)
 
 
 <strike> // TODO : 看看[许单单奋斗记](http://tech.sina.com.cn/i/2012-02-04/11306683283.shtml) </strike>
@@ -38,7 +38,7 @@
 
 公司付钱买的不是你的时间，是你的交付
 
-<img src="./picture/03.png" width="300px">
+![](./picture/03.png)
 
 劳动合同不是卖身契
 
@@ -78,7 +78,7 @@
 > "会选择才是真正的能力"
 
 
-<img src="./picture/04.png" width="300px">
+![](./picture/04.png)
 
 机会不是争取的，机会是别人给的。机会往往青睐有能力的人。
 
@@ -86,7 +86,7 @@
 
 > 为什么别人愿意帮助你，因为你往往帮助过别人
 
-<img src="./picture/05.png" width="100px">
+![](./picture/05.png)
 
 **能力是从做复杂的、困难的、不得心应手的事情来的**
 
@@ -129,7 +129,6 @@
 
 晋升->有潜力
 
-[xv6](https://th0ar.gitbooks.io/xv6-chinese/content/index.html)
 
 任何事情都有对象和对手（对象和对手都是人）
 
