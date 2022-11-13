@@ -64,6 +64,8 @@ nav:
       - vim: computer_science/linux/vim/vim.md
     - os-xv6:
       - 原理: computer_science/xv6/01.md
+  - 物理:
+    - guideline: physics/guideline.md
   - 一点点思考:
     - 许单单的talk: thinking/xudandan-talk/talk.md
   - 关于:
