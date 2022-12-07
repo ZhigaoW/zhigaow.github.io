@@ -1,1 +1,0 @@
-/home/wtog/github/zhigaow.github.io/docs/computer_science/programming_language/trpl/project/ownership/target/debug/ownership: /home/wtog/github/zhigaow.github.io/docs/computer_science/programming_language/trpl/project/ownership/src/main.rs
