@@ -55,6 +55,7 @@ nav:
       - 网络基础: computer_science/network/linux-network.md
       - wireguard: computer_science/network/wireguard.md
       - iptables: computer_science/network/iptables.md
+      - 科学上网: computer_science/network/kexueshangwang/kexueshangwang.md
     - database:
       - 原理: computer_science/database/mechanism.md
     - os-linux:
@@ -68,6 +69,8 @@ nav:
     - guideline: physics/guideline.md
   - 一点点思考:
     - 许单单的talk: thinking/xudandan-talk/talk.md
+  - 新闻:
+    - news/News.md
   - 关于:
     - about/index.md # 使用两个index 这样子左上角第一次打开会是所有Tab 而不是About
     - 个人履历: about/cv-full.md

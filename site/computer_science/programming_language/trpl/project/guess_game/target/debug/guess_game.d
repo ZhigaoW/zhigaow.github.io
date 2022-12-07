@@ -1,1 +1,0 @@
-/home/wtog/github/zhigaow.github.io/docs/computer_science/programming_language/trpl/project/guess_game/target/debug/guess_game: /home/wtog/github/zhigaow.github.io/docs/computer_science/programming_language/trpl/project/guess_game/src/main.rs
