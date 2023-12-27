@@ -6,3 +6,5 @@
 ## Guideline
 
 **MkDocs** 主要是用来快速构建文档的静态网页的
+
+`mkdocs gh-deploy`

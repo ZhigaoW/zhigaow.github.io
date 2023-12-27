@@ -29,6 +29,11 @@ nav:
       - guideline: physics/guideline.md
   - 文史:
       - 资治通鉴: no-physics/zizhitongjian/zizhitongjian.md
+  - 随笔:
+      - 2022/10/26-热爱与终局: thinking/02/02.md
+      - 2023/05/12-鲜衣怒马少年时: thinking/03/03.md
+      - 2023/07/22-不卑不亢: thinking/04/04.md
+      - 2023/12/27-时间与机会成本: thinking/01/01.md
   - 联系我:
       - about/index.md # 使用两个index 这样子左上角第一次打开会是所有Tab 而不是About
       - 联系方式: about/linkme.md
