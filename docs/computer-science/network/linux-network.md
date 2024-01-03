@@ -7,6 +7,23 @@
 1. [Netflix 高性能架构师 Brendan Gregg's Blog](https://www.brendangregg.com/)
 2. [linux command search](https://wangchujiang.com/linux-command/)
 
+## brower rander(浏览器渲染)
+
+[Render-tree Construction, Layout, and Paint](https://web.dev/articles/critical-rendering-path/render-tree-construction)
+
+[web dev](https://web.dev/)
+
+![](http_work/resource/brower_randering.png)
+
+1. Process HTML markup and build the DOM tree.
+2. Process CSS markup and build the CSSOM tree.
+3. Combine the DOM and CSSOM into a render tree.
+4. Run layout on the render tree to compute geometry of each node.
+5. Paint the individual nodes to the screen.
+
+
+
+
 ---
 
 |        |          |        |               |         |         |         |         |
