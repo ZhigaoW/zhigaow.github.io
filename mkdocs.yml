@@ -35,6 +35,7 @@ nav:
       - 2023/07/22-不卑不亢: thinking/04/04.md
       - 2023/12/27-时间与机会成本: thinking/01/01.md
       - 笔记软件: thinking/07/07.md
+  #      - 重要的思考: thinking/00/0.md
   - 联系我:
       - about/index.md # 使用两个index 这样子左上角第一次打开会是所有Tab 而不是About
       - 联系方式: about/linkme.md
