@@ -1,5 +1,11 @@
 # LINUX NETWORK
 
+1. google 禁止使用cookie
+
+
+
+
+
 ## 性能常用工具
 
 ### 参考资料
