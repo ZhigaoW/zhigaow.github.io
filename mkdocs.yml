@@ -50,6 +50,7 @@ nav:
     - 程序设计语言: 
       - trpl: computer_science/programming_language/trpl/trpl.md 
       - html: computer_science/programming_language/html/html.md
+      - 苹果开发: computer_science/programming_language/apple-developer/appleDeveloper.md
     - 网络: 
       - io_uring详解: computer_science/network/io_uring.md
       - 网络基础: computer_science/network/linux-network.md
@@ -63,18 +64,13 @@ nav:
       - linux命令行: computer_science/linux/linux_cmd/linux_basical.md
       - 线程和进程: computer_science/linux/process_thread/basical.md
       - vim: computer_science/linux/vim/vim.md
+      - KernelModules: computer_science/linux/kernel_modules/kernel_modules.md
     - os-xv6:
       - 原理: computer_science/xv6/01.md
   - 物理:
     - guideline: physics/guideline.md
-  - 一点点思考:
-    - 许单单的talk: thinking/xudandan-talk/talk.md
-  - 新闻:
-    - news/News.md
   - 关于:
     - about/index.md # 使用两个index 这样子左上角第一次打开会是所有Tab 而不是About
-    - 个人履历: about/cv-full.md
-    - 支持作者: about/support.md
 
 # [Extensions]
 plugins:
